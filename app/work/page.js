@@ -1,7 +1,7 @@
 import Navbar from "@/app/pages/Navbar"
 import Topbar from "@/app/pages/Topbar"
 import ProjectCard from "./ProjectCard"
-import { othersContribution, vscodeThemes } from "@/constant/project"
+import { othersContribution, vscodeThemes,project } from "@/constant/project"
 
 
 
@@ -19,12 +19,26 @@ const page = () => {
 
 <section className="text-content  flex flex-wrap gap-4 items-center  justify-center sm:pb-16 w-full mb-4 px-3">
 
+
+
+
 {
   othersContribution.map((item)=>{
     return <div key={item.id}>
       <ProjectCard {...item} />
     </div>
   })
+}
+
+
+{
+
+project.map((item)=>{
+  return <div key={item.id}>
+    <ProjectCard {...item} />
+  </div>
+})
+
 }
 
 

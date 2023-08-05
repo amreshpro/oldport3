@@ -20,7 +20,15 @@
 /* Nunito */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;800;1000&display=swap');
 
-
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
 
 
 
@@ -59,18 +67,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
+
 
 body{
   color: #fff;
-  background: #a62252;
+  /* background: #a62252; */
   font-family: 'Poppins',sans-serif;
 }

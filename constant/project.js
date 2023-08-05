@@ -1,10 +1,21 @@
  
 //  project
-const project = [
-
+export const project = [
 
     {
         id: "proj1",
+        title: "Ecommerce Website",
+        description:"A ecommerce website create by using nextjs tailwindcss,reactjs,redux-toolkit.It is fully responsive ",
+        image_url: "https://i.imgur.com/yTJSuhF.png",
+        github_link: "https://github.com/amreshpro/ecommerce-website",
+        live_link: "https://buyshy.netlify.app/",
+        tag: ["nextjs","reactjs","redux-toolkit","tailwindcss","axios"]  
+    },
+  
+
+
+    {
+        id: "proj2",
         title: "Github User Search",
         description:"A github user search, it fetch all information about github user like repos,follower, name,twitter username,country etc.It is fully responsive ",
         image_url: "https://i.imgur.com/Fh1JrZa.png",
