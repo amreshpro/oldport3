@@ -29,7 +29,7 @@ const page = () => {
 
 </section>
 
-<nav className=" sm:fixed fixed right-3 top-1/2 sm:top-[88vh] sm:bottom-2 shadow-lg sm:ml-4">
+<nav className=" sm:fixed sm:bottom-2 shadow-lg mr-4  sm:mr-2  ">
   <Navbar/>
 </nav>
 

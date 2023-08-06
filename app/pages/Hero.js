@@ -30,8 +30,10 @@ const Hero = () => {
 </div>
 </section>
 
-<section className="m-2">
-    <img src="/photo.jpeg" alt="my-photo" className="rounded-full w-80 sm:w-64 " />
+<section className="m-2 flex flex-wrap justify-between w-full relative">
+    <img src="/photo.jpeg" alt="my-photo" className="rounded-full w-72 sm:w-64  " />
+    {/* <img src="/atomic.png" alt="rangoli" className="rounded-full w-80 sm:w-64 animate-bounce hover:animate-pulse " /> */}
+
 </section>
 
 
@@ -39,7 +41,7 @@ const Hero = () => {
 
 
 </section>
-<nav className=" sm:fixed sm:bottom-2 shadow-lg mr-2">
+<nav className=" sm:fixed sm:bottom-2 shadow-lg mr-4  sm:mr-2 ">
   <Navbar/>
 </nav>
 
