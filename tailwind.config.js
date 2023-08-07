@@ -10,8 +10,8 @@ module.exports = {
     colors:{
 'primary':"#701A75",
 'primaryLight':'#D946EF',
-'secondary':"#EC4899",
-'ternary':"#F9A8D4",
+'secondary':"#00e676",
+'ternary':"#f4511e",
 'white':"#ffffff",
 'black':"#000000",
 'gray':"#F8FBFD",
@@ -22,6 +22,8 @@ module.exports = {
 "gold":"#FBBF24",
 "tree":"#65A30D",
 "blueGray":"#94A3B8",
+"purple400":"#C084FC",
+"pink600":"#DB2777",
     },
 
     screens: {
