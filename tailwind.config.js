@@ -8,10 +8,10 @@ module.exports = {
   theme: {
 
     colors:{
-'primary':"#701A75",
+'primary':"#0C4A6E",
 'primaryLight':'#D946EF',
-'secondary':"#00e676",
-'ternary':"#f4511e",
+'secondary':"#0891B2",
+'ternary':"#BEF264",
 'white':"#ffffff",
 'black':"#000000",
 'gray':"#F8FBFD",
@@ -24,6 +24,7 @@ module.exports = {
 "blueGray":"#94A3B8",
 "purple400":"#C084FC",
 "pink600":"#DB2777",
+"emraldLight":"#6EE7B7"
     },
 
     screens: {
