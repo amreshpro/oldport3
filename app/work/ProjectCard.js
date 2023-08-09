@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
 <div className="text p-2 flex  flex-col flex-wrap text-start w-max-80 ">
 
 <h1 className="title text-2xl sm:text-xl font-bold font-nunito text-gold ">{title}</h1>
-<p className="text-[16px] font-bold font-nunito mt-2  text-start leading-tight tracking-wide text-white"> {description}
+<p className="text-[16px]  font-nunito mt-2  text-start leading-tight tracking-wide text-white"> {description}
  </p>
 
 <div className="tag flex flex-wrap gap-0 ">{tag.map((item,i)=>{return <li  key={i} className=" p-1 text-ternary font-poppins font-bold"> {item+" "}</li>})}</div>
