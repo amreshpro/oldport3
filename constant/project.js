@@ -11,11 +11,22 @@ export const project = [
         live_link: "https://buyshy.netlify.app/",
         tag: ["nextjs","reactjs","redux-toolkit","tailwindcss","axios"]  
     },
-  
+  {
+    id:"proj2",
+    title:"3D Portfolio Site",
+        description:"A 3d portfolio website creating by using threejs,react,react-fiber,tailwindcss.It is fully responsive ",
+
+    image_url:"https://i.imgur.com/pd0Aqqc.png",
+        github_link: "https://github.com/amreshpro/3dthree",
+        live_link: "https://yoursamresh.netlify.app/",
+        tag: ["nextjs","reactjs","react-three-fiber","threejs"]  
+
+
+  },
 
 
     {
-        id: "proj2",
+        id: "proj3",
         title: "Github User Search",
         description:"A github user search, it fetch all information about github user like repos,follower, name,twitter username,country etc.It is fully responsive ",
         image_url: "https://i.imgur.com/Fh1JrZa.png",

@@ -22,13 +22,7 @@ const page = () => {
 
 
 
-{
-  othersContribution.map((item)=>{
-    return <div key={item.id}>
-      <ProjectCard {...item} />
-    </div>
-  })
-}
+
 
 
 {
@@ -41,6 +35,14 @@ project.map((item)=>{
 
 }
 
+
+{
+  othersContribution.map((item)=>{
+    return <div key={item.id}>
+      <ProjectCard {...item} />
+    </div>
+  })
+}
 
 
 {

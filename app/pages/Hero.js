@@ -1,7 +1,7 @@
 import Navbar from "./Navbar"
 import Topbar from "./Topbar"
 import socialLinks from "@/constant/socialLinks"
-
+import { intro,onelinear } from "@/constant/about"
 
 
 const Hero = () => {
@@ -22,8 +22,8 @@ const Hero = () => {
 
 <section className="text flex flex-col gap-3 mb-4">
   <span className="text-2xl text-gray-500 font-nunito font-bold">Hii, I'm </span>  <h1 className="text-white text-4xl font-nunito  font-bold">Amresh Maurya</h1>
-   <p className="">Determined individual looking for an engineering job with detailed knowledge in Javascript, Reactjs, Nextjs, Expressjs, Nodejs, TailwindCSS, Java, Python,, MongoDB. An added advantage of knowing Linux,Docker. Ability to write, test, maintain, and debug codes.</p>
-    <p className="font-poppins text-gray-500 m-1 italic">I code beautifully simple things.I enjoy creating things that live on internet and I love what I do.</p>
+   <p className="">{intro}</p>
+    <p className="font-poppins text-gray-500 m-1 italic">{onelinear}</p>
 <div className="social-btn flex gap-4">
     <a href={socialLinks.github} className=" bg-secondary text-white px-3 py-1 rounded-lg font-nunito font-bold">Github</a>
     <a href={socialLinks.resume}  className=" bg-secondary text-white px-4 py-1 rounded-lg font-nunito font-bold ">Resume</a>
