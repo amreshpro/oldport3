@@ -55,7 +55,7 @@ project.map((item)=>{
 
 </section>
 
-<nav className="sm:fixed sm:bottom-2 shadow-lg mr-4  sm:mr-2 4">
+<nav className="sm:fixed sm:bottom-2  sm:top-[88vh] absolute top-[50vh] right-2 shadow-lg mr-4  sm:mr-2 4">
   <Navbar/>
 </nav>
 
