@@ -6,7 +6,7 @@ import { intro,onelinear } from "../constant/about"
 
 const Hero = () => {
   return (
-    <main className="w-full h-full mb-4">
+    <main className="w-full h-full ">
     
   
     

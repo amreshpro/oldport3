@@ -7,8 +7,15 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className=" flex flex-col justify-center w-full h-full pb-4  ">
-      <div className=" z-50 w-max p-2 mb-4 px-4 py-4 m-3 fixed right-1 top-36 sm:top-[86vh]   sm:w-[90vw]  sm:left-0  flex flex-col  justify-evenly items-center sm:flex-row gap-4 shadow-xl bg-bar text-white  rounded-2xl">
+    <nav className=" flex flex-col  w-full h-full absolute items-center justify-center  ">
+      <div className="sm:navbar-location z-50 flex flex-col w-max fixed right-2 sm:right-auto
+      top-36 sm:h-max   sm:flex-row gap-4 
+      justify-evenly py-1 px-1 
+sm:top-auto sm: sm:mt-1 sm:mb-8 sm:w-[88vw] sm:pr-2 sm:bottom-0
+      items-center shadow-xl bg-bar
+       text-white  rounded-2xl">
+
+
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -45,7 +52,7 @@ const Navbar = () => {
           <IoMdContact className="text-3xl sm:text-3xl" />
         </NavLink>
       </div>
-    </div>
+    </nav>
   );
 };
 export default Navbar;
