@@ -1,3 +1,80 @@
+/* all imported font */
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Lobster */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Lilita */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Luckiest Guy , cursive*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/* Sriracha, cursive */
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;800;1000&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-lobster {
+  font-family: 'Lobster', cursive, sans-serif;
+}
+
+
+.font-lilita {
+  font-family: 'Lilita One', cursive, sans-serif;
+}
+
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.font-sriracha {
+  font-family: 'Sriracha', cursive, sans-serif;
+}
+
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+body{
+  color: #fff;
+  /* background: #a62252; */
+  font-family: 'Poppins',sans-serif;
+}
+
+*{
+  scroll-behavior: smooth;
+}
