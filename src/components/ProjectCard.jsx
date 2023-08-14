@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
 <div className="img-github">
   <img src={image_url} alt={title} className="rounded-2xl w-80 h-72 p-2 " />
 
- { live_link ?  <Link to={live_link} className="absolute top-6 left-6 text-center" ><VscPlay className="bg-play animate-bounce text-white shadow-lg rounded-full p-1 text-5xl " /></Link>: null}
+ { live_link ?  <Link to={live_link} className="absolute top-6 left-6 text-center" ><VscPlay className="bg-primary border-4  border-gold animate-bounce text-white shadow-lg rounded-full p-1 text-5xl " /></Link>: null}
 
 { github_link ? <Link to={github_link} className="absolute top-6 right-6" ><BsGithub className="bg-github border-2 border-github p-1 animate-bounce shadow-lg rounded-full text-5xl  ml-0.5  " /></Link> :null}
 

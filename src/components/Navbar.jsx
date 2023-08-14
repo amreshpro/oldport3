@@ -1,6 +1,9 @@
 import { RiHomeHeartFill } from "react-icons/ri";
-import { SiPolymerproject, SiGmail } from "react-icons/si";
+
 import { CgListTree } from "react-icons/cg";
+import {IoMdContact} from 'react-icons/io'
+import {GrProjects} from 'react-icons/gr'
+import {MdWorkspaces} from 'react-icons/md'
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,7 +13,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "" : isActive ? "bg-pink600 rounded-full p-2" : ""
+            isPending ? "" : isActive ? "bg-primary rounded-full p-2" : ""
           }
         >
           <RiHomeHeartFill className="text-3xl sm:text-3xl " />
@@ -19,16 +22,16 @@ const Navbar = () => {
         <NavLink
           to="work"
           className={({ isActive, isPending }) =>
-            isPending ? "" : isActive ? "bg-pink600 rounded-full p-2" : ""
+            isPending ? "" : isActive ? "bg-primary rounded-full p-2" : ""
           }
         >
-          <SiPolymerproject className="text-3xl sm:text-3xl" />
+          <MdWorkspaces className="text-3xl  text-white sm:text-3xl" />
         </NavLink>
 
         <NavLink
           to="skill"
           className={({ isActive, isPending }) =>
-            isPending ? "" : isActive ? "bg-pink600 rounded-full p-2 " : ""
+            isPending ? "" : isActive ? "bg-primary rounded-full p-2 " : ""
           }
         >
           <CgListTree className="text-3xl sm:text-3xl" />
@@ -37,10 +40,10 @@ const Navbar = () => {
         <NavLink
           to="contact"
           className={({ isActive, isPending }) =>
-            isPending ? "" : isActive ? "bg-pink600 rounded-full p-2 " : ""
+            isPending ? "" : isActive ? "bg-primary rounded-full p-2 " : ""
           }
         >
-          <SiGmail className="text-3xl sm:text-3xl" />
+          <IoMdContact className="text-3xl sm:text-3xl" />
         </NavLink>
       </div>
     </div>
