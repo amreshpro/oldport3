@@ -2,7 +2,6 @@ import { RiHomeHeartFill } from "react-icons/ri";
 
 import { CgListTree } from "react-icons/cg";
 import {IoMdContact} from 'react-icons/io'
-import {GrProjects} from 'react-icons/gr'
 import {MdWorkspaces} from 'react-icons/md'
 import { NavLink } from "react-router-dom";
 
