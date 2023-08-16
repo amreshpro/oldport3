@@ -710,13 +710,22 @@ const Desktop = () => {
     shadows
     camera={{
       fov: 70,
+      zoom:0.90,
       near: 1,
-      far: 200,
+      far: 1000,
       position: [8,0.4,-0.5],
     }}
   >
-    <OrbitControls enableZoom={false} maxPolarAngle={5} minPolarAngle={1} />
+    <OrbitControls enableZoom={false}  enableDamping={true}   dampingFactor={0.07}
+  // verttical rotate of model
+  // minAzimuthAngle={-Math.PI / -1.5}
+  // maxAzimuthAngle={Math.PI / 1.66}
+  // horizontal rotate of model
+  minPolarAngle={Math.PI / 3}
+  maxPolarAngle={ - Math.PI / 3}
+   />
     <ambientLight />
+   
     <Suspense fallback={<FallbackLoader />}>
  
       <Center>

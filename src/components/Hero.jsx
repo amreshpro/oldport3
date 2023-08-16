@@ -4,6 +4,8 @@ import { intro, onelinear } from "../constant/about";
 import Desktop from "../canvas/Desktop";
 
 
+
+
 const Hero = () => {
   return (
     <main className="w-full h-screen ">
@@ -60,9 +62,9 @@ const Hero = () => {
                   className="rounded-full w-72 sm:w-64  "
                 />
               </div> */}
-              <div className="model sm:w-full w-full h-full sm:mb-20  px-2 ">
+              <div className="model sm:w-full w-full h-full sm:mb-20  px-2  flex flex-wrap">
            <Desktop/>
-        
+ 
               </div>
             </section>
 
