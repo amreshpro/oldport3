@@ -1,76 +1,57 @@
-import {
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
- github,
-    docker,
-    threejs,
-  } from "../assets";
-  
 
-  
-
-  
   export default [
     {
       name: "HTML 5",
-      icon: html,
+      icon: "https://i.imgur.com/whCcsR1.png",
     },
     {
       name: "CSS 3",
-      icon: css,
+      icon: "https://i.imgur.com/eCUFQLX.png",
     },
     {
       name: "JavaScript",
-      icon: javascript,
+      icon: "https://i.imgur.com/2EeGxbg.png",
     },
     {
       name: "TypeScript",
-      icon: typescript,
+      icon: "https://i.imgur.com/27qaz8a.png",
     },
     {
       name: "React JS",
-      icon: reactjs,
+      icon: "https://i.imgur.com/3XlqowC.png",
     },
     {
       name: "Redux Toolkit",
-      icon: redux,
+      icon: "https://i.imgur.com/lxzmhyH.png",
     },
     {
       name: "Tailwind CSS",
-      icon: tailwind,
+      icon: "https://i.imgur.com/6lizxkE.png",
     },
     {
       name: "Node JS",
-      icon: nodejs,
+      icon: "https://i.imgur.com/B8NJvnF.png",
     },
     {
       name: "MongoDB",
-      icon: mongodb,
+      icon: "https://i.imgur.com/RVCqVh8.png",
     },
     {
       name: "Three JS",
-      icon: threejs,
+      icon: "https://i.imgur.com/j3y8T08.png",
     },
     {
       name: "git",
-      icon: git,
+      icon: "https://i.imgur.com/h7DICgz.png",
     },
     {
         name: "github",
-        icon: github,
+        icon: "https://i.imgur.com/9Bv0oxe.png",
       },
 
     {
       name: "docker",
-      icon: docker,
+      icon: "https://i.imgur.com/yslLZqN.png",
     },
   ];
   
