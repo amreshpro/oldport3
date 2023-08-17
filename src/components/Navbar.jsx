@@ -6,7 +6,7 @@ import {FiSun} from 'react-icons/fi'
 import {MdWorkspaces} from 'react-icons/md'
 import {SiLinktree} from 'react-icons/si'
 import {IoMdContact} from 'react-icons/io'
-
+import {BiSolidHomeHeart} from 'react-icons/bi'
 
 const Navbar = () => {
 
@@ -27,6 +27,7 @@ function onDarkModeClickHandler(){
   </div>
  
 <div className="nav-link flex  justify-center text-3xl  sm:text-2xl gap-4 sm:gap-4 sm:mr-2 ">
+<Link to="/"><BiSolidHomeHeart/></Link>
 <Link to="/work"><MdWorkspaces/></Link>
   <Link to="/skill"> <SiLinktree/></Link>
   <Link to="/contact"><IoMdContact/> </Link>
