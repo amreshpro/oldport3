@@ -1,13 +1,15 @@
 
 
-import React, { Suspense, useRef } from 'react'
+import  { Suspense, useEffect, useRef, useState } from 'react'
 import { Center, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import FallbackLoader from './FallbackLoader'
 
-export function DesktopModel(props) {
+ function DesktopModel(props) {
+  const {isMobile} = props
   const { nodes, materials } = useGLTF('/glb/desktop.glb')
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <group {...props} dispose={null}>
       <group scale={0.01}>
         <mesh geometry={nodes['Object_782_OnTheFly-bg_0'].geometry} material={materials['Material.074_40']} position={[101.601, 40.622, 244.007]} rotation={[-Math.PI / 2, 0.078, Math.PI / 2]} scale={21.893} />
@@ -705,22 +707,52 @@ useGLTF.preload('/glb/desktop.glb')
 
 
 const Desktop = () => {
+
+const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+ 
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
+
+
   return (
     <Canvas
     shadows
     camera={{
-      fov: 70,
+      fov: 70 ,
       zoom:0.90,
       near: 1,
       far: 1000,
-      position: [8,0.4,-0.5],
+      position: isMobile ? [12,0.7,-0.7]: [8,0.4,-0.5],
+
+  
     }}
+
+
+   
+        
   >
     <OrbitControls enableZoom={false}  enableDamping={true}   dampingFactor={0.07}
-  // verttical rotate of model
-  // minAzimuthAngle={-Math.PI / -1.5}
-  // maxAzimuthAngle={Math.PI / 1.66}
-  // horizontal rotate of model
   minPolarAngle={Math.PI / 3}
   maxPolarAngle={ - Math.PI / 3}
    />
@@ -730,7 +762,7 @@ const Desktop = () => {
  
       <Center>
       
-        <DesktopModel/>
+        <DesktopModel  isMobile={isMobile} />
       </Center>
     </Suspense>
   </Canvas>
