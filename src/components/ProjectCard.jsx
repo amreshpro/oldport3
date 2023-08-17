@@ -13,14 +13,16 @@ const ProjectCard = (props) => {
   // eslint-disable-next-line react/prop-types
   const {title,description,image_url,github_link,live_link , tag,id} = props
   
+const allTags = tag.join(" ")
+
   return (
     <div  key={id} className={`mt-2 p-1 relative rounded-lg bg-secondary sm:w-auto w-80 shadow-lg flex flex-col justify-center items-center `}>
 <div className="img-github">
   <img src={image_url} alt={title} className="rounded-2xl w-80 h-72 p-2 " />
 
- { live_link ?  <Link to={live_link} className="absolute top-6 left-6 text-center" ><VscPlay className="bg-primary border-4  border-gold animate-bounce text-white shadow-lg rounded-full p-1 text-5xl " /></Link>: null}
+ { live_link ?  <Link to={live_link} className="absolute top-6 left-6 text-center" ><VscPlay className="bg-primary border-4  border-gold animate-bounce text-white shadow-lg rounded-full p-1 text-5xl  hover:bg-pink600 hover:text-white " /> <span className="px-2 py-1 rounded-lg font-bold font-nunito bg-primary text-gold text-2xl  hover:bg-pink600 hover:text-white ">Live</span> </Link>: null}
 
-{ github_link ? <Link to={github_link} className="absolute top-6 right-6" ><BsGithub className="bg-github border-2 border-github p-1 animate-bounce shadow-lg rounded-full text-5xl  ml-0.5  " /></Link> :null}
+{ github_link ? <Link to={github_link} className="absolute top-6 right-6" ><BsGithub className="bg-github border-2 border-github p-1 animate-bounce shadow-lg rounded-full text-5xl  ml-0.5   hover:bg-pink600 hover:text-white " /><span className="px-2 py-1 rounded-lg font-bold font-nunito bg-primary text-gold text-2xl hover:bg-pink600 hover:text-white ">Code</span> </Link> :null}
 
 </div>
 
@@ -30,7 +32,7 @@ const ProjectCard = (props) => {
 <p className="text-[16px]  font-nunito mt-2  text-start leading-tight tracking-wide text-white"> {description}
  </p>
 
-<div className="tag flex flex-wrap gap-0 ">{tag.map((item,i)=>{return <li  key={i} className=" p-1 text-ternary font-poppins font-bold"> {item+" "}</li>})}</div>
+<div className="tag flex flex-wrap gap-0 ">{<li className=" p-1 text-ternary font-poppins font-bold"> {allTags}</li>}</div>
 </div>
 
 
