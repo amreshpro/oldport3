@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import {
-  Decal,
+
   Float,
   OrbitControls,
   Preload,
@@ -13,14 +13,21 @@ import FallbackLoader from "./FallbackLoader";
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
+  const boxRef = useRef();
+
+  useFrame(() => {
+    boxRef.current.rotation.y += 0.1;
+    boxRef.current.rotation.x += 0.1;
+  });
+
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={1.25} />
       {/* <directionalLight position={[0, 0, 0.05]} /> */}
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2.75}  ref={boxRef}     rotation-x={Math.PI * 0.25} rotation-y={Math.PI * 0.25} >
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color="#fff"
+          // color={"red"}
           map={decal}
           polygonOffset
           polygonOffsetFactor={-5}
