@@ -94,24 +94,28 @@ const Navbar = () => {
      
         >
           <ul
-            className={`h-screen text-ternary px-4 flex flex-col justify-center items-center gap-4 pt-2 pb-8 ease-linear duration-1000`}
+            className={`h-screen w-full text-ternary flex flex-col  justify-start  items-center gap-4  ease-linear duration-1000`}
           >
           
 
-<div className="list flex flex-col gap-4"> 
+<div className="list flex flex-col justify-center items-start gap-4 mt-8"> 
 {
         
         navbar.map((item)=>{
           return (
-            <li key={item.id}>   <a href={`#${item.route}`} className="flex justify-center items-center gap-1">  <p className="text-ternary">{item.count}</p> <p className="text-lightest-slate hover:text-ternary">{item.title}</p> </a> </li>
+            <li key={item.id}>   <a href={`#${item.route}`}  onClick={() =>
+              setIsMenuOpenOpen((prev) => {
+                return prev === true ? false : true;
+              })
+            } className="flex justify-center items-center text-2xl gap-1">  <p className="text-ternary">{item.count}</p> <p className="text-lightest-slate hover:text-ternary">{item.title}</p> </a> </li>
             )
 })
 }
    
     </div>
-    <div className="resume mt-4">
+    <div className="resume mt-4 mb-8">
 
-<Link to="#" className="px-3 py-2  text-ternary border border-ternary shadow-lg hover:border-r-4 hover:border-b-4  rounded-lg text-center w-max ">Resume</Link>
+<Link to={socialLinks.resume} className="px-3 py-2 text-2xl text-ternary border border-ternary shadow-lg hover:border-r-4 hover:border-b-4  rounded-lg text-center w-max ">Resume</Link>
     </div>
 
 

@@ -14,7 +14,7 @@ const Works = () => {
 
 
   
-    <div className="project bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full sm:mt-56  ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4">
+    <div className="project bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full   ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4">
    
 
 

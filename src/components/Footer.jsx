@@ -7,14 +7,14 @@ import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs"
 
 const Footer = () => {
   return (
-<section className="hidden   sm:flex  justify-center items-center text-slate gap-8 pb-8 px-2 text-2xl ">
-    <li className="hover:text-ternary ">
-        <Link to={socialLinks.github}><BsGithub/></Link>
+<section className="hidden   sm:flex  justify-center items-center text-slate gap-8 pb-8 px-2 text-4xl ">
+    <li className="hover:text-ternary border-2 hover:border-4 border-ternary rounded-full p-2">
+        <Link to={socialLinks.github} className=""><BsGithub/></Link>
     </li>
-    <li className="hover:text-ternary ">
-        <Link to={socialLinks.linkedin} ><BsLinkedin/></Link>
+    <li className="hover:text-ternary border-2 hover:border-4 border-ternary rounded-full p-2">
+        <Link to={socialLinks.linkedin} className="" ><BsLinkedin/></Link>
     </li>
-    <li className="hover:text-ternary "><Link to={socialLinks.instagram} ><BsInstagram/></Link></li>
+    <li className="hover:text-ternary border-2 hover:border-4 border-ternary rounded-full p-2 "><Link className="" to={socialLinks.instagram} ><BsInstagram/></Link></li>
 </section>
   )
 }
