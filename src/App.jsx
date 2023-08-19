@@ -18,7 +18,7 @@ import About from "./components/About";
 
 const App = () => {
   return (
-    <main className="bg-primary w-full h-fulll">
+    <main className="bg-primary w-screen h-fulll">
 <BrowserRouter>
 
   <Navbar/>
