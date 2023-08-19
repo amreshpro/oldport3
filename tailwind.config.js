@@ -6,7 +6,7 @@ export default {
   theme: {
 colors:{
 "main":"#0a192f",
-"primary":"#112240",
+"primary":"#0a192f",
 "secondary":"#233554",
 "ternary":"#64ffda",
 "black":"#000",
@@ -19,10 +19,11 @@ colors:{
 "light-slate":"#a8b2d1",
 "lightest-slate":"#ccd6f6",
 "white": "#e6f1ff",
-"green":"#64ffda",
+"green":"#aaff00",
 "green-tint":"rgba(100, 255, 218, 0.1)",
 "pink":"#f57dff",
-"blue": "#57cbff"
+"blue": "#57cbff",
+"red":"#dd0000"
 
 
 },

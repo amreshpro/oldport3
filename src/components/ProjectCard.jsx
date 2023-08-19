@@ -1,6 +1,6 @@
 
-import { BsGithub,  } from "react-icons/bs"
-import { VscPlay } from "react-icons/vsc"
+import { BsGithub  } from "react-icons/bs"
+import { ImLink } from "react-icons/im"
 import { Link } from "react-router-dom"
 
 
@@ -11,35 +11,50 @@ const ProjectCard = (props) => {
 
 
   // eslint-disable-next-line react/prop-types
-  const {title,description,image_url,github_link,live_link , tag,id} = props
+  const {title,description,image_url,github_link,live_link , tag} = props
   
-const allTags = tag.join(" ")
+
 
   return (
-    <div  key={id} className={`mt-2 p-1 relative rounded-lg bg-secondary sm:w-auto w-80 shadow-lg flex flex-col justify-center items-center `}>
-<div className="img-github">
-  <img src={image_url} alt={title} className="rounded-2xl w-80 h-72 p-2 " />
-
- { live_link ?  <Link to={live_link} className="absolute top-6 left-6 text-center" ><VscPlay className="bg-primary border-4  border-gold animate-bounce text-white shadow-lg rounded-full p-1 text-5xl  hover:bg-pink600 hover:text-white " /> <span className="px-2 py-1 rounded-lg font-bold font-nunito bg-primary text-gold text-2xl  hover:bg-pink600 hover:text-white ">Live</span> </Link>: null}
-
-{ github_link ? <Link to={github_link} className="absolute top-6 right-6" ><BsGithub className="bg-github border-2 border-github p-1 animate-bounce shadow-lg rounded-full text-5xl  ml-0.5   hover:bg-pink600 hover:text-white " /><span className="px-2 py-1 rounded-lg font-bold font-nunito bg-primary text-gold text-2xl hover:bg-pink600 hover:text-white ">Code</span> </Link> :null}
-
-</div>
-
-<div className="text p-2 flex  flex-col flex-wrap text-start w-max-80 ">
-
-<h1 className="title text-2xl sm:text-xl font-bold font-nunito text-gold ">{title}</h1>
-<p className="text-[16px]  font-nunito mt-2  text-start leading-tight tracking-wide text-white"> {description}
- </p>
-
-<div className="tag flex flex-wrap gap-0 ">{<li className=" p-1 text-ternary font-poppins font-bold"> {allTags}</li>}</div>
-</div>
-
-
-
-
-
+  <div className="bg-secondary text-slate flex md:flex-col sm:flex-col h-max md:h-full justify-evenly shadow-lg">
+  
+  <div className="img sm:w-full  md:w-full w-1/2 ">
+    <img src={image_url} alt={title} className="md:h-full sm:h-full h-96 object-fill" />
+  </div>
+  <div className="content px-4 py-4 flex flex-col  gap-2 sm:items-start md:items-start  items-end w-1/2 md:w-full   sm:w-full">
+    <p className="font-mono text-ternary text-sm">Featured Project</p>
+    <Link to={live_link} className="text-lightest-slate text-2xl sm:text-xl hover:underline hover:text-ternary font-nunito font-bold" >{title}</Link>
+<div className="description-container w-full p-2 sm:p-0.5">
+<div className="desscription w-full break-words bg-primary rounded-sm text-slate py-4  px-2 border-r-2 border-b-2 border-ternary   hover:border-r-4 hover:border-b-4 hover:border-ternary ">
+<p className="sm:text-lg sm:w-full">{description}</p> 
     </div>
+</div>
+    <div className="tag flex gap-2 flex-wrap items-center">
+
+
+{
+  tag.map((item,i)=>{
+    return(
+      <p key={i} className="text-ternary text-sm border border-ternary rounded-lg w-max h-max py-1 px-2 ">{item}</p>
+      
+      )
+    })
+}
+    </div>
+    {/* line */}
+    <div className="h-[2px] w-full mt-4 mb-2 bg-slate hover:bg-ternary ml-0.5"></div>
+
+<div className="link flex text-3xl gap-4 sm:justify-center sm:w-full ">
+  <Link to={github_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-2  border-ternary "><BsGithub/></Link>
+  <Link to={live_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-2 border-ternary"><ImLink/></Link>
+
+</div>
+
+
+  </div>
+
+
+  </div>
   )
 }
 export default ProjectCard

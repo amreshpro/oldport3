@@ -1,56 +1,61 @@
 
   export default [
     {
+      id:"techidhtml",
       name: "HTML 5",
       icon: "https://i.imgur.com/whCcsR1.png",
     },
-    {
+    { id:"techidcss",
       name: "CSS 3",
       icon: "https://i.imgur.com/eCUFQLX.png",
     },
-    {
+    { id:"techidjs",
       name: "JavaScript",
       icon: "https://i.imgur.com/2EeGxbg.png",
     },
-    {
-      name: "TypeScript",
-      icon: "https://i.imgur.com/27qaz8a.png",
-    },
-    {
+  
+    { id:"techidreact",
       name: "React JS",
       icon: "https://i.imgur.com/3XlqowC.png",
     },
-    {
+    { id:"techidredux",
       name: "Redux Toolkit",
       icon: "https://i.imgur.com/lxzmhyH.png",
     },
-    {
+    { id:"techidexpressjs",
+    name: "Expressjs",
+    icon: "https://i.imgur.com/a2woN60.png",
+  },
+    { id:"techidtailwindcss",
       name: "Tailwind CSS",
       icon: "https://i.imgur.com/6lizxkE.png",
     },
-    {
+    { id:"techidnodejs",
       name: "Node JS",
       icon: "https://i.imgur.com/B8NJvnF.png",
     },
-    {
+    { id:"techidmongodb",
       name: "MongoDB",
       icon: "https://i.imgur.com/RVCqVh8.png",
     },
-    {
+    { id:"techidthree",
       name: "Three JS",
-      icon: "https://i.imgur.com/j3y8T08.png",
+      icon: "https://i.imgur.com/Lky1TeM.jpg",
     },
-    {
-      name: "git",
+    { id:"techidgit",
+      name: "Git",
       icon: "https://i.imgur.com/h7DICgz.png",
     },
-    {
-        name: "github",
+    { id:"techidgithub",
+        name: "Github",
         icon: "https://i.imgur.com/9Bv0oxe.png",
       },
-
-    {
-      name: "docker",
+      { id:"techidtypescript",
+      name: "TypeScript",
+      icon: "https://i.imgur.com/27qaz8a.png",
+    },
+    { id:"techidocker",
+      name: "Docker",
       icon: "https://i.imgur.com/yslLZqN.png",
     },
   ];

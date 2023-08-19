@@ -5,7 +5,7 @@ export const project = [
     {
         id: "proj1",
         title: "Ecommerce Website",
-        description:"A ecommerce website create by using nextjs tailwindcss,reactjs,redux-toolkit.It is fully responsive ",
+        description:"A ecommerce website create by using nextjs,tailwindcss,reactjs,redux-toolkit.",
         image_url: "https://i.imgur.com/yTJSuhF.png",
         github_link: "https://github.com/amreshpro/ecommerce-website",
         live_link: "https://buyshy.netlify.app/",
@@ -14,7 +14,7 @@ export const project = [
   {
     id:"proj2",
     title:"3D Portfolio Landing Page",
-        description:"A 3d portfolio website creating by using threejs,react,react-fiber,tailwindcss.It is fully responsive ",
+        description:"A 3d portfolio website creating by using threejs,react,react-fiber,tailwindcss.It is fully responsive. ",
 
     image_url:"https://i.imgur.com/pd0Aqqc.png",
         github_link: "https://github.com/amreshpro/3dthree",

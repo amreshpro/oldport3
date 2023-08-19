@@ -8,22 +8,22 @@ export default [
 {"id":"navid01",
     "count":"01.",
     "title":"About",
-    "route":"/about"
+    "route":"about"
 },
 {"id":"navid02",
     "count":"02.",
     "title":"Work",
-    "route":"/work"
+    "route":"work"
 },
 {"id":"navid03",
     "count":"03.",
     "title":"Skill",
-    "route":"/skill"
+    "route":"skill"
 },
 {"id":"navid04",
     "count":"04.",
     "title":"Contact",
-    "route":"/contact"
+    "route":"contact"
 },
 
 

@@ -1,101 +1,235 @@
-import { Link } from "react-router-dom"
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import LoadingSpin from "./LoadingSpin";
 
 const Contact = () => {
-    return (
-      <div>
+  const form= useRef();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
+
+  const [isEmpty, setIsEmpty] = useState({
+    name:"",
+    email:"",
+    message:""
+  }
   
-  <div className=" z-50 flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            />
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Create a New Account
-            </h2>
-          </div>
-  
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center ">
-            <form className="space-y-6" action="#" method="POST">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                  Email address
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+  )
+
+  const notify = () => toast("Message sent successfully!");
+
+  const submitForm = async (e) => {
+
+    e.preventDefault();
+
+
+// remove error if some input enter
+if(name.length>3){setIsEmpty((prev)=>{return{...prev,name:""}})}
+if(email.length>6){setIsEmpty((prev)=>{return{...prev,email:""}})}
+if(message.length>3){setIsEmpty((prev)=>{return{...prev,message:""}})}
+
+
+
+// regular expression
+    const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+
+    if (
+      name.length >= 4 &&
+      email.length >= 4 &&
+      message.length >= 8 &&
+      regex.test(email)
+    ) {
+
+        setIsLoading(true)
+
+
+      try {
+        await emailjs
+          .sendForm(
+            "service_ag81x54",
+            "template_fsu30ii",
+            form.current,
+            "RG54GFebTODsx5ksH"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              setName("");
+              setEmail("");
+              setMessage("");
+              setIsLoading(false)
+              notify()
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      } catch (err) {
+        console.log(err);
+      }
+     
+    } else {
+
+
+      // form error 
+      if(name.length<3){
+        setIsEmpty((prev)=>{
+          return {...prev,name:"Name can't be empty or too short in length"}
+        })
+      }
+       if(email.length<6){
+        setIsEmpty((prev)=>{
+          return {...prev,email:"email can't be empty or too short in length"}
+        })
+      
+      }
+    if(message.length<6){
+        setIsEmpty((prev)=>{
+          return {...prev,message:"Message can't be empty or too short in length"}
+        })
+      }
+      
+
+      if (!regex.test(email)) {
+        setIsEmpty((prev)=>{
+          return {...prev,email:"Email must be in proper format"}
+        })
+
+
+      }
+    }
+  };
+
+  return (
+    isLoading ? <LoadingSpin/>:
+    <div className="bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full sm:mt-56  ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4" >
+<div id="work" className="flex gap-1 justify-start  "><p className="text-ternary font-mono text-xl ">04.</p> <p className="hover:text-ternary text-lightest-slate font-nunito text-4xl font-bold">Contact</p> <div className="h-[1px] w-36 bg-slate hover:bg-ternary ml-0.5 mt-4"></div> </div>
+    
+    <div className="flex w-screen justify-center items-center flex-col  sm:mb-16">
+
+    <div className="flex justify-center items-center w-96 sm:w-[95vw] font-poppins font-semibold ">
+     
+      <div className="flex  flex-col justify-center px-6 sm:px-1 sm:pl-1  py-4 lg:px-8  ">
+       
+       <div className="sm:mx-auto sm:w-screen sm:max-w-sm">
+          <img
+            className="mx-auto h-10 w-auto"
+            src="/favicon.png"
+            alt="my-logo"
+          />
+          <h2 id="contact" className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-white">
+            Send your message
+          </h2>
+        </div>
+
+        <div className="mt-8 sm:mx-auto sm:w-full sm:px-4 sm:max-w-sm">
+          <form
+            className="space-y-6 sm:w-full"
+            action="#"
+            method="POST"
+            ref={form}
+            onSubmit={submitForm}
+          >
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm leading-6 font-bold text-white"
+              >
+                Name
+              </label>
+              <div className="mt-2 ">
+                <input
+                  id="user_name"
+                  value={name}
+                  name="user_name"
+                  type="text"
+                  placeholder="Enter your name..."
+                  required={true}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  className="block w-full border-b-4 bg-primary border-ternary  text-green py-1.5 px-2 shadow-sm  outline-none sm:text-sm sm:leading-6"
                   />
-                </div>
-              </div>
-  
-              <div>
-                <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                    Password
-                  </label>
-                  {/* <div className="text-sm">
-                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                      Forgot password?
-                    </a>
-                  </div> */}
-                </div>
-                <div className="mt-2">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-<br/>
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  Confirm  Password
-                  </label>
-                <div className="mt-2">
-                  <input
-                    id="confirm-password"
-                    name="confirm-password"
-                    type="password"
-                 
-                    required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <p className="text-red py-0.5 px-0.5">{isEmpty.name}</p>
 
               </div>
-  
-              <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Signup
-                </button>
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block  text-sm leading-6 font-bold text-white"
+              >
+                Email address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  name="user_email"
+                  type="email"
+                  value={email}
+                  autoComplete="email"
+                  placeholder="Enter your email..."
+                  required={true}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  className="block w-full  border-b-4 bg-primary border-ternary py-1.5 px-2 text-ternary shadow-sm  outline-none  sm:text-sm sm:leading-6"
+                />
+                <p className="text-red py-0.5 px-0.5">{isEmpty.email}</p>
+
               </div>
-            </form>
-  
-            <p className="mt-10 text-center text-sm text-gray-500">
-              Already a member?{' '}
-              <Link to="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Sign In
-              </Link>
-            </p>
-          </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm  leading-6 font-bold text-white"
+              >
+                Message
+              </label>
+              <div className="mt-2">
+                <textarea
+                  id="desc"
+                  name="message"
+                  placeholder="Enter your message..."
+                  value={message}
+                  required={true}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  className="block w-full border-b-4 bg-primary border-ternary py-1.5 px-2 text-ternary shadow-sm outline-none  sm:text-sm sm:leading-6"
+                />
+                <p className="text-red py-0.5 px-0.5">{isEmpty.message}</p>
+
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                onClick={(e) => {
+                  submitForm(e);
+                }}
+                className="flex w-full justify-center rounded-md bg-secondary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-ternary hover:text-primary  "
+              >
+                Send
+              </button>
+            </div>
+            <ToastContainer />
+          </form>
         </div>
-  
-  
       </div>
-    )
-  }
-  export default Contact
+    </div>
+            </div>
+    </div>
+  );
+};
+
+export default Contact;
