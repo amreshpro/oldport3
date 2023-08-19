@@ -5,7 +5,7 @@ export const project = [
     {
         id: "proj1",
         title: "Ecommerce Website",
-        description:"A ecommerce website create by using nextjs,tailwindcss,reactjs,redux-toolkit.",
+        description:"A MERN application that allows users to buy items and add to cart product with payment gateway functionality. Also integrated popular web development frameworks and Tailwind CSS for a responsive and visually appealing user interface, showcasing their proficiency in the MERN stack.It is compatible with all mobile device.",
         image_url: "https://i.imgur.com/yTJSuhF.png",
         github_link: "https://github.com/amreshpro/ecommerce-website",
         live_link: "https://buyshy.netlify.app/",
