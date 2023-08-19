@@ -4,7 +4,11 @@ import ScrollReveal from "scrollreveal"
 
 const Works = () => {
 
-  ScrollReveal().reveal('.project')
+  ScrollReveal().reveal('.project',{
+    delay: 375,
+    duration: 500,
+    reset: true
+  })
 
 
   return (
