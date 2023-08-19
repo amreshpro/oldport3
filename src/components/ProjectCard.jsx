@@ -45,8 +45,8 @@ const ProjectCard = (props) => {
     <div className="h-[2px] w-full mt-4 mb-2 bg-slate hover:bg-ternary ml-0.5"></div>
 
 <div className="link flex text-3xl gap-4 sm:justify-center sm:w-full ">
-  <Link to={github_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-2  border-ternary "><BsGithub/></Link>
-  <Link to={live_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-2 border-ternary"><ImLink/></Link>
+  <Link to={github_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-4  border-ternary "><BsGithub/></Link>
+  <Link to={live_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-4 border-ternary"><ImLink/></Link>
 
 </div>
 
