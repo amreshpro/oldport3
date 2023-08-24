@@ -13,7 +13,7 @@ const About = () => {
 <p className="text-slate">{intro} </p>
 <p className="text-slate italic ">{oneliner}</p>
     </div>
-    <div className="img rounded-lg hover:border-r-8 hover:border-b-8 border-2 border-ternary w-full mr-8 sm:mr-1 flex items-center justify-center p-2  ">
+    <div className="img rounded-lg border-r-8 border-b-8 border-2 border-ternary w-full mr-8 sm:mr-1 flex items-center justify-center p-2  ">
 
     <img
                src="/photo.jpeg"
