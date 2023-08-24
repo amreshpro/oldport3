@@ -57,7 +57,7 @@ const Navbar = () => {
    
 
         <div className="resume p-2 w-36 text-center  sm:hidden">
-<Link to={socialLinks.resume} className=" px-2 py-2 text-ternary border border-ternary shadow-lg hover:border-r-4 hover:border-b-4  rounded-lg text-center w-max ">Resume</Link>
+<Link to={socialLinks.resume} className=" px-2 py-2 text-ternary border border-ternary shadow-lg border-r-4 border-b-4  rounded-lg text-center w-max ">Resume</Link>
 
 </div>
 
@@ -115,7 +115,7 @@ const Navbar = () => {
     </div>
     <div className="resume mt-4 mb-8">
 
-<Link to={socialLinks.resume} className="px-3 py-2 text-2xl text-ternary border border-ternary shadow-lg hover:border-r-4 hover:border-b-4  rounded-lg text-center w-max ">Resume</Link>
+<Link to={socialLinks.resume} className="px-3 py-2 text-2xl text-ternary border border-ternary shadow-lg border-r-4 border-b-4  rounded-lg text-center w-max ">Resume</Link>
     </div>
 
 
