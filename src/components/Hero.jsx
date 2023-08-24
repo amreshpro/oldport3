@@ -18,7 +18,7 @@ const Hero = () => {
 <p className="text-slate font-nunito  text-lg "> {oneliner}</p>
 
 
-<Link to={socialLinks.resume} className="px-3 py-2 text-2xl text-ternary border border-ternary shadow-lg hover:border-r-4 hover:border-b-4  rounded-lg text-center w-max ">Resume</Link>
+<Link to={socialLinks.resume} className="px-3 py-2 text-2xl text-ternary border border-ternary shadow-lg border-r-4 border-b-4  rounded-lg text-center w-max ">Resume</Link>
 </header>
   );
 };
