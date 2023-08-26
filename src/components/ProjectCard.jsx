@@ -1,4 +1,4 @@
-
+import {ReactPropTypes } from 'react'
 import { BsGithub  } from "react-icons/bs"
 import { ImLink } from "react-icons/im"
 import { Link } from "react-router-dom"
@@ -56,5 +56,10 @@ const ProjectCard = (props) => {
 
   </div>
   )
+}
+
+
+ProjectCard.propTypes = {
+  tag:ReactPropTypes.Array.isRequired,
 }
 export default ProjectCard
