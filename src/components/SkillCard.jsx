@@ -1,7 +1,5 @@
 
 
-import { ReactPropTypes } from "react"
-
 
 
 const SkillCard = ({icon,name}) => {
@@ -19,9 +17,6 @@ const SkillCard = ({icon,name}) => {
        
   )
 }
-SkillCard.propTypes={
-  icon:ReactPropTypes.string.isRequired,
-  name:ReactPropTypes.string.isRequired,
-}
+
 
 export default SkillCard
