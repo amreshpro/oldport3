@@ -1,6 +1,6 @@
 
 import { BsGithub  } from "react-icons/bs"
-import { ImLink } from "react-icons/im"
+import { FaPlay } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 
@@ -42,11 +42,11 @@ const ProjectCard = (props) => {
 }
     </div>
     {/* line */}
-    <div className="h-[2px] w-full mt-4 mb-2 bg-slate hover:bg-ternary ml-0.5"></div>
+    <div className="h-[2px] w-full mt-4 mb-2 bg-slate hover:bg-ternary ml-0.5"> </div>
 
 <div className="link flex text-3xl gap-4 sm:justify-center sm:w-full ">
  { github_link ? <Link to={github_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-4  border-ternary "><BsGithub/></Link> :""}
- { live_link ? <Link to={live_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-4 border-ternary"><ImLink/></Link> :"" }
+ { live_link ? <Link to={live_link} className="text-lightest-slate hover:text-ternary rounded-full px-2 py-2  border-4 border-ternary"><FaPlay className="pl-1" /></Link> :"" }
 
 </div>
 
