@@ -7,7 +7,7 @@ const socialLinks ={
     github:"https://github.com/amreshpro",
     linkedin:"https://linkedin.com/in/ursamresh",
     portfolio:"https://amreshpro.com",
-    resume:"https://drive.google.com/file/d/1Br8ZWK2uhQ9teX75GbFAh8kxg__JMMQS/view?usp=drive_link"
+    resume:"https://docs.google.com/document/d/1rtm2dUYhb9dWuUJMA3ymmkyIOPr4bxQtkFXkMoV6P14/edit?usp=sharing"
 }
     
     export default socialLinks
