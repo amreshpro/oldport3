@@ -2,7 +2,7 @@
 
 
 const socialLinks ={
-    instagram:"https://instagram.com/ursamresh",
+    instagram:"https://instagram.com/amreshify",
     twitter:"https://twitter.com/ursamresh",
     github:"https://github.com/amreshpro",
     linkedin:"https://linkedin.com/in/ursamresh",
