@@ -8,7 +8,7 @@ import Works from "./Works"
 
 const MainContainer = () => {
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col gap-4 w-screen h-full ">
 
 <Hero/>
 <About/> 

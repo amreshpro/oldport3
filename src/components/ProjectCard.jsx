@@ -25,15 +25,17 @@ const ProjectCard = (props) => {
     <p className="font-mono text-ternary text-sm">Featured Project</p>
     <Link to={live_link} className="text-lightest-slate text-2xl sm:text-xl hover:underline hover:text-ternary font-nunito font-bold" >{title}</Link>
 <div className="description-container w-full p-2 sm:p-0.5">
-<div className="desscription w-full break-words bg-primary rounded-sm text-slate py-4  px-2 border-r-2 border-b-2 border-ternary   hover:border-r-4 hover:border-b-4 hover:border-ternary ">
-<p className="sm:text-lg sm:w-full">{description}</p> 
+<div className="description w-full break-words bg-primary rounded-sm text-slate py-4  px-2  border-ternary border-t-2 border-l-2  border-r-2 border-b-2 text-justify  ">
+<p className="sm:text-md sm:w-full text-justify">{description}</p> 
+{/* <p className="sm:text-md sm:w-full text-justify">🌟 Here's what you can expect from me:</p> */}
+
     </div>
 </div>
     <div className="tag flex gap-2 flex-wrap items-center">
 
 
 {
-  tag.map((item,i)=>{
+  tag?.map((item,i)=>{
     return(
       <p key={i} className="text-ternary text-sm border border-ternary rounded-lg w-max h-max py-1 px-2 ">{item}</p>
       
