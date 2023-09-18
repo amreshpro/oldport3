@@ -27,7 +27,7 @@ const ProjectCard = (props) => {
 <div className="description-container w-full p-2 sm:p-0.5">
 <div className="description w-full break-words bg-primary rounded-sm text-slate py-4  px-2  border-ternary border-t-2 border-l-2  border-r-2 border-b-2 text-justify  ">
 <p className="sm:text-md sm:w-full text-justify">{description}</p> 
-{/* <p className="sm:text-md sm:w-full text-justify">🌟 Here's what you can expect from me:</p> */}
+
 
     </div>
 </div>
