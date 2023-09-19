@@ -88,3 +88,22 @@ body, html {
 .vertical-mode{
     writing-mode: vertical-rl;
 }
+
+
+@keyframes rotate-border{
+  
+  0%   {border:2px solid #64ffda}
+  25%   {border:8px solid #9bffe1}
+  50%   {border:4px solid #70fff8}  
+  76%   {border:12px solid #24beb7}  
+  100%   {border:10px solid #64ffda}
+
+}
+
+.border-animation{
+  border: 1px solid #64ffda;
+animation-name: rotate-border;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+

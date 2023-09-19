@@ -8,7 +8,7 @@ import Works from "./Works"
 
 const MainContainer = () => {
   return (
-    <div className="flex flex-col gap-4 w-screen h-full ">
+    <div className="flex flex-col gap-4 w-screen h-full sm:justify-between ">
 
 <Hero/>
 <About/> 

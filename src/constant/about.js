@@ -3,7 +3,7 @@ export const oneliner = "I code beautifully simple things.I enjoy creating thing
 
 
 
-export const intro1 = `👋 Hello, I'm Amresh Maurya, a passionate and dynamic Full Stack MERN Developer ready to embark on an exciting journey in the world of web development.`
+export const intro1 = `👋 Hello, I'm a passionate and dynamic Full Stack MERN Developer ready to embark on an exciting journey in the world of web development.`
 
 export const intro2 = `🚀 My fascination with creating innovative digital experiences led me to dive headfirst into the ever-evolving realm of web development. As a recent graduate with a deep enthusiasm for coding, I've equipped myself with the skills and knowledge necessary to turn ideas into functional and visually stunning web applications.`
 
