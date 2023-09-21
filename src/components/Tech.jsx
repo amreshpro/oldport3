@@ -9,7 +9,7 @@ const Tech = () => {
   return (
 
     <div className="content flex flex-col justify-between px-2 py-2 items-center h-screen sm:mb-20">
-    <h1 className="text-white font-nunito font-bold text-4xl m-1">Skills</h1>
+    <h1 id="skill" className="text-white font-nunito font-bold text-4xl m-1">Skills</h1>
     <div className='flex flex-row flex-wrap justify-center gap-16 h-full mt-4'>
       {
       tech.map((technology) => (
