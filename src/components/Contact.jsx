@@ -108,8 +108,8 @@ if(message.length>3){setIsEmpty((prev)=>{return{...prev,message:""}})}
 
   return (
     isLoading ? <LoadingSpin/>:
-    <div className="bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full sm:mt-8  ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4  sm:w-screen" >
-<div id="contact" className="flex gap-1 justify-start  "><p className="text-ternary font-mono text-xl ">04.</p> <p className="hover:text-ternary text-lightest-slate font-nunito text-4xl font-bold">Contact</p> <div className="h-[1px] w-36 bg-slate hover:bg-ternary ml-0.5 mt-4"></div> </div>
+    <div  id="contact" className="bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full sm:mt-8  ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4  sm:w-screen" >
+<div className="flex gap-1 justify-start  "><p className="text-ternary font-mono text-xl ">04.</p> <p className="hover:text-ternary text-lightest-slate font-nunito text-4xl font-bold">Contact</p> <div className="h-[1px] w-36 bg-slate hover:bg-ternary ml-0.5 mt-4"></div> </div>
     
     <div className="flex w-screen justify-center items-center flex-col  sm:mb-16">
 
