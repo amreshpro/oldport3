@@ -1,4 +1,4 @@
-import { clones } from "../constant/project"
+import { clones, othersContribution } from "../constant/project"
 import ProjectCard from "./ProjectCard"
 import ScrollReveal from "scrollreveal"
 
@@ -18,21 +18,32 @@ const Works = () => {
 
 
 
-      <div className="project bg-primary flex flex-wrap flex-col gap-4 justify-center  h-full   ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4">
+      <div className="project bg-primary flex flex-wrap  gap-4 justify-center  h-full   ml-8 sm:mr-0 sm:ml-0 px-16 sm:px-4 py-4">
 
 
 
-        {
+      
+      {
 
-          clones.map((item) => {
-            return (
-              <ProjectCard key={item.id} {...item} />
-            )
-          })
+clones.map((item) => {
+  return (
+    <ProjectCard key={item.id} {...item} />
+  )
+})
 
-        }
+}
 
 
+{/* contribution */}
+{
+
+othersContribution.map((item) => {
+return (
+<ProjectCard key={item.id} {...item} />
+)
+})
+
+}
 
 
       </div>

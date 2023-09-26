@@ -82,15 +82,15 @@ export const project = [
   
   
   export const clones = [
-  //   {
-  // id : "clones_1",
-  // title:"Swigg Clone",
-  // description:"A food ordering site named Swiggy. This site is in development.",
-  // image_url:"https://i.imgur.com/LufubPv.png",
-  // live_link:"https://swigi.netlify.app/",
-  // github_link:"https://github.com/amreshpro/swiggy",
-  // tag:["#reactjs","#tailwindcss","#nodejs","#clone"]
-  //   },
+    {
+  id : "clones_1",
+  title:"Swigg Clone",
+  description:"A food ordering site named Swiggy. This site is in development.",
+  image_url:"https://i.imgur.com/LufubPv.png",
+  live_link:"https://swigi.netlify.app/",
+  github_link:"https://github.com/amreshpro/swiggy",
+  tag:["#reactjs","#tailwindcss","#nodejs","#clone"]
+    },
     {
 
       id : "clones_2",
