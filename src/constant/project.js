@@ -85,7 +85,8 @@ export const project = [
     {
   id : "clones_1",
   title:"Swigg Clone",
-  description:"A food ordering site named Swiggy. This site is in development.",
+  description:`Developed a fully functional clone of the Swiggy.com website using modern web technologies to replicate its core features and user interface.
+  Technologies/Tools Used: React.js, Tailwind CSS, JavaScript, HTML, CSS, Git, and GitHub.`,
   image_url:"https://i.imgur.com/LufubPv.png",
   live_link:"https://swigi.netlify.app/",
   github_link:"https://github.com/amreshpro/swiggy",

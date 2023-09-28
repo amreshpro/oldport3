@@ -60,13 +60,13 @@ const ProjectCard = (props) => {
 
 
 <div className="card w-96 bg-secondary rounded-lg shadow-xl">
-  <Link to={live_link}><img src={image_url} alt={title} className="rounded-t-lg" /></Link>
+  <Link to={live_link}><img src={image_url} alt={title} className="rounded-t-lg w-full h-52" /></Link>
   <div className="card-body px-4 text-ternary text-justify">
     <h2 className="card-title text-lightest-slate text-2xl py-2">{title}</h2>
     <p className="font-nunito">{description}</p>
           <div className="card-actions flex justify-between gap-4 text-4xl py-2 pb-4">
-      <Link to={live_link} className="btn btn-primary border border-ternary rounded-full items-center"><BsPlay/></Link>
-      <Link to={github_link} className="btn btn-primary"><BsGithub/></Link>
+{ live_link &&    <Link to={live_link} className="btn btn-primary border border-ternary rounded-full items-center"><BsPlay/></Link>}
+    {  github_link && <Link to={github_link} className="btn btn-primary"><BsGithub/></Link>}
     </div>
   </div>
 </div>
