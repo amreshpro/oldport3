@@ -88,7 +88,7 @@ export const project = [
   description:`Developed a fully functional clone of the Swiggy.com website using modern web technologies to replicate its core features and user interface.
   Technologies/Tools Used: React.js, Tailwind CSS, JavaScript, HTML, CSS, Git, and GitHub.`,
   image_url:"https://i.imgur.com/LufubPv.png",
-  live_link:"https://swigi.netlify.app/",
+  live_link:"https://swigyfood.netlify.app/",
   github_link:"https://github.com/amreshpro/swiggy",
   tag:["#reactjs","#tailwindcss","#nodejs","#clone"]
     },
