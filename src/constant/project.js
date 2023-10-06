@@ -72,7 +72,7 @@ export const project = [
   title:"Oh My Zsh Terminal Theme ",
   description:"Oh My Zsh will not make you a 10x developer...but you may feel like one.",
   image_url:"https://i.imgur.com/DJE1Fvw.png",
-  live_link:"",
+  live_link:"https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes#amresh-terminal-theme",
   github_link:"https://github.com/amreshpro/zsh-theme",
   tag:["#cli","#terminal","#zsh","#oh-my-zsh"]
     },
